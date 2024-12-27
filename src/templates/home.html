@@ -2,12 +2,10 @@
 {% block head_title %}Home-{{block.super}}{% endblock head_title %}
 {% block content %}
     <p>Hello from home.html</p>
-    {% for query in queryset  %}
         <div>
-            <h2>{{ query.path }}</h2>
-            <p>{{ query.timestamp }}</p>
+            <p>Page Visit Count: {{page_visit_count}}</p>
+            <p>Total Visit Count: {{total_visit_count}}</p>
         </div>
-    {% endfor %}
 {% endblock content %}
 
 
