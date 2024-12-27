@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block head_title %}Home-{{block.super}}{% endblock head_title %}
+{% block content %}
+    <p>Hello from home.html</p>
+    {% for query in queryset  %}
+        <div>
+            <h2>{{ query.path }}</h2>
+            <p>{{ query.timestamp }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}
+
+
